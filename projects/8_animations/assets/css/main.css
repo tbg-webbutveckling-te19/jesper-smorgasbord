@@ -1,0 +1,484 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #99003d;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    perspective: 800px;
+}
+
+.animationGallery {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    /* flex-flow: wrap row; */
+    flex-flow: wrap-reverse row-reverse;
+    width: 90vw;
+    min-height: 80vh;
+    background: #e5005c;
+    margin: 10px auto 10px auto;
+    padding: 20px;
+}
+
+.parent {
+    width: 30%;
+    min-height: 500px;
+    border: 1px solid #ff66a3;
+    display: flex;
+    flex-direction: column;
+    background: rgb(150, 0, 50);
+    margin: 20px;
+}
+
+.parent h2 {
+    text-align: center;
+}
+
+.child {
+    width: 100%;
+    height: 500px;
+    background: rgb(200, 10, 60);
+    padding: 5px;
+    position: relative;
+}
+
+.colorChange {
+    width: 100%;
+    height: 75px;
+    background: rgb(170, 0, 50);
+    margin: 5px 0px;
+}
+
+.changeBg {
+    transition: background 500ms ease-in-out; /* cubic bezier */
+}
+
+.changeBg:hover {
+    background: cyan;
+}
+
+.changeText {
+    transition: 500ms ease-in-out;
+}
+
+.changeText:hover {
+    text-shadow: -5px 2px 5px #ff00ff, 5px -2px 5px #00ffff;
+    color: darkblue;
+}
+
+.changeBorder {
+    border: 5px solid black;
+    transition: border-color 1000ms ease;
+}
+
+.changeBorder:hover {
+    border-color: navajowhite;
+}
+
+.fade {
+    width: 150px;
+    height: 150px;
+    background: rgb(170, 0, 50);
+    margin: 5px;
+    transition: opacity 300ms linear, border 250ms linear;
+}
+
+.fade:nth-child(1):hover {
+    opacity: 0;
+}
+
+.fade h2 {
+    opacity: 0;
+    transition: opacity 10000ms;
+}
+
+.fade:nth-child(2):hover h2 {
+    opacity: 1;
+}
+
+.fade:nth-child(3):hover {
+    border: 5px dotted whitesmoke;
+}
+
+/* Scale */
+
+.scale {
+    height: 75px;
+    width: 75px;
+    background: rgb(170, 0, 50);
+    margin: 5px;
+    transition: transform 500ms;
+}
+
+.scale:nth-child(1):hover {
+    transform: scaleY(70);
+}
+
+.scale:nth-child(2):hover {
+    transform: scaleX(0.5);
+}
+
+.scale:nth-child(3):hover {
+    transform: scaleY(0.2);
+}
+
+.scale:nth-child(4):hover {
+    transform: translateY(500px);
+}
+
+.scale:nth-child(5):hover {
+    transform: scale(25);
+}
+
+/* Rotate */
+
+.rotate {
+    width: 75px;
+    height: 75px;
+    background: rgb(170, 0, 50);
+    margin: 5px;
+    transition: 500ms;
+}
+
+.rotate:nth-child(1):hover {
+    transform: rotate(135deg);
+}
+
+.rotate:nth-child(2):hover {
+    transform: rotate(-270deg);
+}
+
+.rotate:nth-child(3) {
+    transition: transform 10000ms, border-radius 5000ms, scale 500ms;
+}
+
+.rotate:nth-child(3):hover {
+    transform: rotate(108000deg) scale(2);
+    border-radius: 100%;
+}
+
+.rotate:nth-child(4):hover {
+    transform: rotateX(90deg);
+}
+
+.rotate:nth-child(5):hover {
+    transform: rotateY(270deg);
+}
+
+/* Border-radius */
+
+.br {
+    width: 150px;
+    height: 150px;
+    background: rgb(170, 0, 50);
+    margin: 5px;
+}
+
+.square, .circle {
+    transition: 500ms linear;
+}
+
+.square:hover {
+    border-radius: 100%;
+}
+
+.circle {
+    border-radius: 100%;
+}
+
+.circle:hover {
+    border-radius: 0%;
+}
+
+/* Translate */
+
+.translate {
+    width: 75px;
+    height: 75px;
+    background: rgb(170, 0, 50);
+    margin: 5px;
+    transition: 500ms ease-in-out;
+}
+
+.translate:nth-child(1):hover {
+    transform: translateX(10px);
+}
+
+.translate:nth-child(2):hover {
+    transform: translateY(-75px);
+}
+
+.translate:nth-child(3):hover {
+    transform: translateZ(50px);
+}
+
+.translate:nth-child(4):hover {
+    transform: translate(-20px, -20px);
+}
+
+.translate:nth-child(5):hover {
+    transform: translate(500px, 30px);
+}
+
+/* Delay */
+
+.delay {
+    width: 75px;
+    height: 75px;
+    background: rgb(170, 0, 50);
+    margin: 5px;
+    transition: 1000ms ease;
+}
+
+.child:hover .delay {
+    transform: translateX(400px);
+}
+
+.delay:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.delay:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.delay:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.delay:nth-child(5) {
+    transition-delay: 800ms;
+}
+
+
+/* Box-shadow */
+
+.shadow {
+    width: 100%;
+    height: 100%;
+}
+
+.shadow button {
+    width: 80%;
+    height: 50px;
+    background: rgb(170, 0, 50);
+    color: black;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.btnShadow1:hover {
+    background: transparent;
+    box-shadow: 2px 2px 0px black;
+    border: none;
+}
+
+.btnShadow2:hover {
+    background: black;
+    color: white;
+    box-shadow: 0px 0px 20000px 200px rgba(255, 50, 200, 0.5); /* x y blur spread color */
+    /* border: none;   */
+}
+
+/* Filter */
+
+.filter1, .filter2 {
+    width: 200px;
+    height: 150px;
+    background-image: url(../images/nasa_colors.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 400ms ease;
+    margin: 5px;
+}
+
+.filter1:nth-child(1) {
+    filter: grayscale(0%);
+}
+
+.filter1:nth-child(1):hover {
+    filter: grayscale(100%)
+}
+
+.filter1:nth-child(2) {
+    filter: blur(0px);
+}
+
+.filter1:nth-child(2):hover {
+    filter: blur(4px);
+}
+
+.filter1:nth-child(3) {
+    filter: brightness(100%);
+}
+
+.filter1:nth-child(3):hover {
+    filter: brightness(200%);
+}
+
+.filter2:nth-child(1) {
+    filter: contrast(100%)
+}
+
+.filter2:nth-child(1):hover {
+    filter: contrast(200%);
+}
+
+.filter2:nth-child(2) {
+    filter: hue-rotate(0deg);
+}
+
+.filter2:nth-child(2):hover {
+    filter: hue-rotate(270deg);
+}
+
+.filter2:nth-child(3) {
+    filter: invert(0%);
+}
+
+.filter2:nth-child(3):hover {
+    filter: invert(100%);
+}
+
+/* BG animation */
+
+.bgAnimation {
+    animation: bgChange 2000ms alternate infinite;
+}
+
+@keyframes bgChange {
+    from {
+        background: rgb(170, 0, 50); 
+    }
+    to {
+        background: rgb(200, 10, 60);
+    }
+}
+
+/* Square Animation */
+
+.squareAnimation {
+    height: 100px;
+    width: 100px;
+    background: rgb(170, 0, 50);
+    animation: move 3000ms linear alternate infinite;
+    position: relative;
+}
+
+@keyframes move {
+    from {
+        top: 0px;
+        left: 0px;
+    }
+    to {
+        top: 100px;
+        left: 100px;
+    }
+}
+
+/* Move Around Animation */
+
+.moveAround {
+    width: 100px;
+    height: 100px;
+    background: rgb(170, 0, 50);
+    animation: moveAround 10000ms infinite;
+}
+
+@keyframes moveAround {
+    0%, 100% {
+        transform: translate3d(0px, 0px, 0px);
+    }
+    20% {
+        transform: translate3d(100px, 50px, -250px);
+    }
+    40% {
+        transform: translate3d(-20px, -50px, 100px);
+    }
+    60% {
+        transform: translate3d(-25px, 10px, -400px);
+    }
+    80% {
+        transform: translate3d(0px, 0px, 300px)
+    }
+}
+
+/* Image Slider Animation */
+
+.imgSlider {
+    animation: imgSlider 10000ms infinite;
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes imgSlider {
+    0%, 100% {
+        background-image: url(../images/nebula.jpg);
+    }
+    20% {
+        background-image: url(../images/big.jpg);
+    }
+    40% {
+        background-image: url(../images/coast.jpg);
+    }
+    60% {
+        background-image: url(../images/island.jpg);
+    }
+    80% {
+        background-image: url(../images/mountain.jpg);
+    }
+}
+
+/* Ghost Animation */
+
+.ghost {
+    width: 100%;
+    height: 100%;
+    animation: spooky 5000ms infinite;
+    opacity: 0%;
+    transition: 100ms linear;
+}
+
+.ghost:hover {
+    opacity: 100%;
+}   
+
+@keyframes spooky {
+    50% {
+        transform: translate(0px, 30px);
+    }
+}
+
+/* gött o finn */
+
+.addFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addBorder {
+    border: 1px solid #ff66a3;
+}
+
+
+
+
+/* 
+.animationItem {
+    width: 200px;
+    height: 200px;
+    background: #ff66a3;
+    transition: background 1000ms, border-radius 200ms ease-in;
+    border-radius: 10px;
+}
+
+.animationItem:hover {
+    background: #ff00ff;
+    border-radius: 100%;
+} */

@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+body {
+    background-color: rgb(80, 200, 255)
+}
+h1 {
+    font-style: italic;
+    font-size: 48px;
+    text-align: center;
+    font-weight: 500;
+}
+
+h3 {
+    text-align: center;
+    color: rgb(40, 55, 20);
+    text-decoration: underline;
+    letter-spacing: 1cm;
+    font-family: wide latin;
+}
+
+h5 {
+    color: saddlebrown;
+    font-size: 32px;
+    font-family: Segoe UI;
+}
+
+p {
+    text-align: center;
+    color: black;
+    font-family: wide latin;
+}
+
+p::first-letter {
+    font-size: 64px;
+}
+
+ul {
+    background-color: rgb(100, 30, 140);
+    padding: 2%;
+    color: greenyellow;
+    box-shadow: 3px -2px 14px;
+    font-family: Segoe UI;
+}
+
+ul li::first-letter {
+    color: hotpink;
+}
+
+img {
+    width: 80%;
+    box-shadow: 100px 100px 20000px;
+    color: lawngreen;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    display: block;
+    background-color: blueviolet;
+    color: black;
+    font-size: 128px;
+    text-align: center;
+    text-decoration: none;
+    font-family: wide latin;
+}

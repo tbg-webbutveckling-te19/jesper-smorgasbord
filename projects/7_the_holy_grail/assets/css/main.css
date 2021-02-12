@@ -1,0 +1,24 @@
+@charset "utf-8";
+body {
+    background: #4e0033;
+}
+
+header {
+    width: 80%;
+    height: 200px;
+    background: #75014d;
+    margin: 10px auto 10px auto;
+}
+
+nav {
+    width: 80%;
+    height: 50px;
+    background: #610140;
+    margin: 0px auto 10px auto;
+}
+
+main {
+
+}
+
+    

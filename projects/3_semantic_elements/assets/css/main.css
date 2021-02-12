@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/* ctrl + * */
+body {
+    background-color: seagreen;
+    margin-top: 0px;
+}
+
+header {
+    background-color: rgb(0, 66, 37);
+    height: 175px;
+    padding: 100px;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    color:snow;
+    font-size: 96px;
+    font-style: oblique;
+    font-weight: 800;
+    font-family: Segoe UI;
+    margin-bottom: 0px;
+}
+
+header p {
+    color:snow;
+    font-size: 32;
+    font-style: unset;
+    font-weight: 200;
+    font-family: Wide Latin;
+    margin-top: 0px;
+}
+
+main {
+    min-height: 600px;
+    background-color: rgb(0, 66, 37);
+    display: flex; /* parent is a flex-container */
+    flex-direction: row; /* main axis */
+    flex-wrap: wrap;
+    justify-content: space-around; /* aligns flex-items along the main axis */
+    align-items: stretch;  /* aligns flex-items along the cross axis */
+}
+
+main section { 
+    /* parent is a flex container and we are flex items */
+    flex: 1;
+    background-color: teal;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+
+main section:nth-child(even) {
+    background-color: cyan;
+
+}
+
+main section:nth-child(1) {
+    flex: 1;
+}
+
+main section:nth-child(2) {
+    flex: 5;
+}
+
+footer {
+    background-color: rgb(0, 66, 37);
+    display: flex;
+    justify-content: space-between;
+    height: 5cm;
+}
+
+footer section {
+    background-color: darkred;
+    flex: 1;
+    border: 10px solid beige;
+    text-align: center;
+    color: snow;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 2px;
+}
+
+footer section ul {
+    list-style: none;
+    padding: 0px;
+}
+
+footer section a {
+    color: hotpink;
+    text-decoration: none;
+}
+
+footer section a:hover {
+    color: lawngreen;
+    font-weight: bolder;
+    background-color: darkblue;
+}
